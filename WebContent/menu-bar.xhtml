@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<h:head>
+		<h:outputStylesheet library="css" name="menu-bar.css" />
+	</h:head>
+
+	<div class="menu-bar">
+		<div>
+			<h:form>
+				<ul id="menu-ul">
+
+					<li><h:commandLink value="Início"
+							action="main?faces-redirect=true" /></li>
+
+					<li type=""><h:commandLink value="Cadastro" />
+						<ul>
+							<li><h:commandLink value="Usuários"
+									action="cadastro-usuario?faces-redirect=true" /></li>
+						</ul></li>
+
+					<li><h:commandLink value="Lançamentos" action="lacamentos" /></li>
+				</ul>
+				<h:commandButton title="Sair" image="resources/img/logout.png"
+					class="logout-btn" action="#{logManager.sair}" />
+			</h:form>
+		</div>
+	</div>
+
+</ui:composition>

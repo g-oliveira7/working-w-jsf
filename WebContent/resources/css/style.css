@@ -1,0 +1,115 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+	font-family: Nunito, sans-serif;
+}
+
+label {
+	font-weight: bolder
+}
+
+.ipt {
+	font-family: Arial, sans-serif;
+	font-size: 13pt;
+	position: relative;
+	padding: 0 0 0 10px;
+	height: 30px;
+	margin: 3px 0 3px 0;
+	border: 1px solid rgba(1, 1, 1, 0.4);
+	border-radius: 5px
+}
+
+.ipt-half-size {
+	width: 50%;
+}
+
+.ipt-full-size {
+	width: 99%;
+}
+
+.btn {
+	font-weight: bolder;
+	font-size: 12pt;
+	border: none;
+	border-radius: 4px;
+	padding: 10px;
+	display: inline;
+	margin: 0 5px 0 5px;
+	text-decoration: none;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.btn-unique {
+	font-weight: bolder;
+	font-size: 12pt;
+	border: none;
+	border-radius: 3.5px;
+	padding: 10px;
+	margin: 0;
+	cursor: pointer;
+}
+
+.btn:hover {
+	opacity: 0.9
+}
+
+.btn:active {
+	scale: 0.95
+}
+
+.btn-blue {
+	color: white;
+	background-color: #518EE7
+}
+
+.btn-red {
+	color: white;
+	background-color: #E75151
+}
+
+.btn-grey {
+	color: white;
+	background-color: #AEAEAE
+}
+
+.btn-green {
+	color: white;
+	background-color: #5cb85c
+}
+
+.fields {
+	position: relative;
+	margin: 5px auto 5px auto;
+	width: 50%;
+}
+
+.title {
+	color: rgba(1, 1, 1, 0.6);
+	font-size: 16pt
+}
+
+.header {
+	padding: 8px
+}
+
+.header-id {
+	width: 10%
+}
+
+.header-name {
+	width: 35%
+}
+
+.header-email {
+	width: 35%
+}
+
+.header-btn {
+	width: 10%
+}
+
+.row:hover {
+	background-color: rgba(1, 1, 1, 0.1)
+}

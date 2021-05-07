@@ -1,0 +1,18 @@
+@charset "ISO-8859-1";
+
+.welcome {
+	position: absolute;
+	right: 9.74025974025974025974025974026%;
+	top: 4%;
+	display: block;
+}
+
+.main-body {
+	font-size: 12pt;
+	position: relative;
+	background-color: rgba(66, 147, 238, 0.5);
+	width: 100%;
+	min-height: 670px;
+	box-shadow: 0 2px 5px 0 black;
+	display: block;
+}

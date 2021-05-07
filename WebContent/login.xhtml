@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Login</title>
+	<style>
+.login-style {
+	position: relative;
+	width: 20%;
+	margin: 180px auto;
+	padding: 5%;
+	box-shadow: 0 0 7px black;
+	background-color: #d2d2d2
+}
+
+.ipt {
+	position: relative;
+	font-family: Arial, sans-serif;
+	font-size: 13pt;
+	height: 30px;
+	margin: 3px 0 3px 0;
+	border: 1px solid rgba(1, 1, 1, 0.4);
+	border-radius: 5px;
+	font-size: 13pt;
+	font-family: Arial, sans-serif;
+}
+
+.ipt:focus {
+	box-shadow: 0 0 5px 2px rgb(66, 147, 238);
+}
+
+.ipt-full-size {
+	width: 99%;
+}
+
+.btn-unique {
+	position: relative;
+	font-weight: bolder;
+	font-size: 12pt;
+	border: none;
+	border-radius: 4px;
+	width: 100%;
+	padding: 10px;
+	margin: 0;
+	cursor: pointer;
+	font-weight: bolder;
+}
+
+.btn-green {
+	color: white;
+	background-color: #5cb85c
+}
+</style>
+</h:head>
+
+<h:body style="background-color: rgba(66, 147, 238, 0.5);">
+	<div id="login-div" class="login-style">
+		<h:panelGrid id="login-panel" columns="1">
+			<h:form id="login-form">
+			
+				<h:outputLabel for="email" value="E-mail" style="font-weight: bold"/>
+					<h:inputText id="email" styleClass="ipt ipt-full-size"
+						value="#{logManager.user.email}" />
+
+				<h:outputLabel for="password" value="Senha"
+					style="font-weight: bold"/>
+					<h:inputSecret id="password" styleClass="ipt ipt-full-size"
+						value="#{logManager.user.password}" />
+
+				<h:commandButton value="Login" styleClass="btn-unique btn-green"
+					style="margin-top: 10px;" action="#{logManager.validar}" />
+			</h:form>
+		</h:panelGrid>
+	</div>
+</h:body>
+</html>

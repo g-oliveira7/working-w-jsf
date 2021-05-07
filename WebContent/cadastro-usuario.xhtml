@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Painel de Controle - Usuários</title>
+	<h:outputStylesheet library="css" name="style.css" />
+	<h:outputStylesheet library="css" name="main.css" />
+</h:head>
+
+<h:body>
+	<ui:include src="/menu-bar.xhtml" />
+	<div class="main-body">
+		<h:form id="user-data">
+			<fieldset class="fields">
+				<legend style="margin: auto" class="title">Usuário</legend>
+				<h:panelGrid columns="2" style="margin: auto">
+					<h:outputLabel for="id" value="Id" />
+					<h:inputText id="id" value="#{userManager.user.id}" readonly="true"
+						class="ipt ipt-half-size" />
+
+					<h:outputLabel for="name" value="Nome" />
+					<h:inputText id="name" value="#{userManager.user.name}"
+						class="ipt ipt-full-size" />
+
+					<h:outputLabel for="email" value="E-mail" />
+					<h:inputText id="email" value="#{userManager.user.email}"
+						class="ipt ipt-full-size" />
+
+					<h:outputLabel for="password" value="Senha" />
+					<h:inputText id="password" value="#{userManager.user.password}"
+						class="ipt ipt-full-size" />
+
+					<h:outputLabel />
+					<h:panelGroup>
+						<h:commandButton value="Novo" action="#{userManager.novo}"
+							class="btn btn-blue" />
+						<h:commandButton value="Salvar" action="#{userManager.salvar}"
+							class="btn btn-green" />
+						<h:commandButton value="Delete" action="#{userManager.deletar}"
+							class="btn btn-red" />
+						<h:commandButton value="Limpar" type="reset" class="btn btn-grey" />
+					</h:panelGroup>
+				</h:panelGrid>
+			</fieldset>
+
+			<fieldset class="fields">
+				<legend style="margin: auto" class="title">Lista de
+					Usuários</legend>
+				<h:dataTable var="u" value="#{userManager.allUsers}"
+					style="text-align: center; margin: auto">
+
+					<h:column headerClass="header header-id">
+						<f:facet name="header">Id</f:facet>
+						<h:outputText value="#{u.id}" style="text-align: center" />
+					</h:column>
+
+					<h:column headerClass="header header-name">
+						<f:facet name="header">Nome</f:facet>
+						<h:outputText value="#{u.name}" />
+					</h:column>
+
+					<h:column headerClass="header header-email">
+						<f:facet name="header">E-mail</f:facet>
+						<h:outputText value="#{u.email}" />
+					</h:column>
+
+					<h:column headerClass="header header-btn">
+						<f:facet name="header"></f:facet>
+						<h:commandButton value="Editar" class="btn btn-blue">
+							<f:setPropertyActionListener value="#{u}"
+								target="#{userManager.user}" />
+						</h:commandButton>
+					</h:column>
+
+					<h:column headerClass="header header-btn">
+						<f:facet name="header"></f:facet>
+						<h:commandButton value="Deletar" action="#{userManager.deletar}"
+							class="btn btn-red">
+							<f:setPropertyActionListener value="#{u}"
+								target="#{userManager.user}" />
+						</h:commandButton>
+					</h:column>
+				</h:dataTable>
+			</fieldset>
+		</h:form>
+	</div>
+</h:body>
+</html>

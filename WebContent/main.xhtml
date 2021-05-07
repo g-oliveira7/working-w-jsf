@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Menu Principal</title>
+	<h:outputStylesheet library="css" name="main.css" />
+</h:head>
+
+<h:body>
+	<ui:include src="/menu-bar.xhtml" />
+	<div class="welcome">
+		<h:form>
+			<h:outputText value="#{logManager.welcome}" />
+		</h:form>
+	</div>
+	<div class="main-body" style="height: 610px">
+		<h:graphicImage id="mylogo" library="img" name="mylogo.png" alt="Logo"
+			height="250" style="position: absolute; top: 28.6%; left: 41.8%;" />
+	</div>
+</h:body>
+</html>
